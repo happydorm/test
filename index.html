@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나의 기숙사 유형 테스트 | 행복기숙사</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-bg">
+  <div class="deco deco-1"></div><div class="deco deco-2"></div><div class="deco deco-3"></div>
+  <main class="app">
+
+    <section id="start" class="screen active">
+      <header class="topbar">
+        <span class="logo-dot"></span><span>행복기숙사</span>
+        <span class="topbar-sub">HAPPY DORM</span>
+      </header>
+      <div class="start-card">
+        <div class="start-copy">
+          <div class="label">HAPPY DORM TEST</div>
+          <h1>나의 기숙사<br><em>유형 테스트</em></h1>
+          <p class="lead">나는 기숙사에서 어떤 생활을 할까?<br>8개의 질문으로 나의 기숙사 생활 스타일을 알아보세요.</p>
+          <div class="meta"><span>✦ 8문항</span><span>◷ 약 2분</span><span>♥ 4가지 유형</span></div>
+          <button class="main-btn" id="startBtn"><span>테스트 시작하기</span><b>→</b></button>
+          <p class="small-note">정답은 없어요. 평소의 나를 떠올려 선택해 주세요!</p>
+        </div>
+        <div class="start-visual">
+          <div class="visual-orbit"></div>
+          <div class="spark s1">✦</div><div class="spark s2">✦</div><div class="spark s3">·</div>
+          <img src="dreambye-start.png" alt="행복기숙사 꿈별이">
+          <div class="speech">나의 기숙사<br><strong>생활 스타일은?</strong></div>
+        </div>
+      </div>
+      <div class="start-bottom"><span>HAPPY DORMITORY</span><span>나에게 맞는 기숙사 생활 찾기</span></div>
+    </section>
+
+    <section id="quiz" class="screen">
+      <header class="quiz-top">
+        <button class="icon-btn" id="backBtn" aria-label="이전 질문">←</button>
+        <div class="quiz-progress">
+          <div class="progress-meta"><span>HAPPY DORM TEST</span><strong id="progressText">1 / 8</strong></div>
+          <div class="progress-track"><div id="progressBar"></div></div>
+        </div>
+        <button class="exit-btn" id="exitBtn">나가기</button>
+      </header>
+      <div class="question-area">
+        <div class="question-label">QUESTION <span id="questionNumber">01</span></div>
+        <h2 id="questionText"></h2>
+        <p class="question-hint">가장 나다운 답변 하나를 골라주세요.</p>
+        <div class="answers" id="answers"></div>
+      </div>
+      <div class="quiz-foot"><span id="questionDots"></span><span>나의 기숙사 생활 스타일을 찾아가는 중</span></div>
+    </section>
+
+    <section id="loading" class="screen loading">
+      <div class="loading-card">
+        <div class="loading-orbit"><span></span></div>
+        <p class="label">MY DORM TYPE</p>
+        <h2>당신의 기숙사 생활을<br>살펴보고 있어요.</h2>
+        <p>답변을 바탕으로 생활 스타일을 정리하는 중이에요.</p>
+      </div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-top">
+        <span class="label">MY DORM TYPE</span>
+        <h1>나의 기숙사 생활 스타일</h1>
+        <p>8개의 답변을 바탕으로 알아본 나의 유형이에요.</p>
+      </div>
+      <div class="result-hero">
+        <div class="result-copy">
+          <span id="resultTag" class="result-tag"></span>
+          <h2 id="resultTitle"></h2>
+          <div class="quote" id="resultQuote"></div>
+          <p id="resultOneLiner"></p>
+          <div class="hashtags" id="hashtags"></div>
+        </div>
+        <div class="result-mascot-wrap">
+          <div class="result-circle"></div>
+          <img id="resultMascot" src="dreambye-clean.png" alt="꿈별이">
+        </div>
+      </div>
+      <div class="result-grid">
+        <article class="info-card"><div class="card-icon">✦</div><h3>이런 모습이 있어요</h3><ul id="traits"></ul></article>
+        <article class="info-card tip-card"><div class="card-icon">💡</div><h3>행복한 기숙사 생활 TIP</h3><p id="tip"></p></article>
+      </div>
+      <div class="result-actions">
+        <button class="main-btn" id="retryBtn">다시 테스트하기 <b>↻</b></button>
+        <button class="sub-btn" id="copyBtn">결과 문구 복사하기</button>
+      </div>
+      <p class="result-footer">행복기숙사와 함께 나에게 맞는 기숙사 생활을 찾아보세요.</p>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
